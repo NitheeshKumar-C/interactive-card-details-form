@@ -48,20 +48,20 @@
         <div id="input-area">
           <div>
             <label for="">Cardholder Name</label><br>
-            <input type="text" id="name-input" placeholder="e.g. Jane Appleseed" onkeypress="return /[a-z|A-Z]/i.test(event.key)" maxlength="20">
+            <input type="text" id="name-input" placeholder="e.g. Jane Appleseed" onkeydown="return /[a-z|A-Z]/i.test(event.key)" maxlength="20">
             <p class="error" id="name-err">Can't be blank</p>
           </div>
           <div>
             <label for="">Card Number</label><br>
-            <input type="text" id="cn-input" placeholder="e.g. 1234 5678 9123 0000" onkeypress="return /[0-9]/i.test(event.key)" maxlength="19">
+            <input type="text" id="cn-input" placeholder="e.g. 1234 5678 9123 0000" onkeydown="return /[0-9]/i.test(event.key)" maxlength="19">
             <p class="error" id="cn-err">Can't be blank</p>
           </div>
           <div class="input-data-cvc">
               <div>
                 <label for="">Exp. Date (MM/YY)</label><br>
                 <div class="mmyy">
-                  <input type="text" placeholder="MM" id="month-input" onkeypress="return /[0-9]/i.test(event.key)" onkeyup="return /[0-9]/i.test(event.key)" minlength="1" maxlength="2" max="12">
-                <input type="text" placeholder="YY" id="year-input" onkeypress="return /[0-9]/i.test(event.key)" onkeyup="return /[0-9]/i.test(event.key)" minlength="1" maxlength="2">  
+                  <input type="text" placeholder="MM" id="month-input" onkeydown="return /[0-9]/i.test(event.key)" minlength="1" maxlength="2" max="12">
+                <input type="text" placeholder="YY" id="year-input"  onkeydown="return /[0-9]/i.test(event.key)" minlength="1" maxlength="2">  
               <p class="error" id="mmyy-err">Can't be blank</p>
                 </div>
                 </div>
