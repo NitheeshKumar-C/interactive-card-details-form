@@ -60,14 +60,14 @@
               <div>
                 <label for="">Exp. Date (MM/YY)</label><br>
                 <div class="mmyy">
-                  <input type="text" placeholder="MM" id="month-input" onkeypress="return /[0-9]/i.test(event.key)" minlength="1" maxlength="2" max="12">
-                <input type="text" placeholder="YY" id="year-input" onkeypress="return /[0-9]/i.test(event.key)" minlength="1" maxlength="2">  
+                  <input type="number" placeholder="MM" id="month-input" onkeypress="return /[0-9]/i.test(event.key)" onkeyup="return /[0-9]/i.test(event.key)" minlength="1" maxlength="2" max="12">
+                <input type="number" placeholder="YY" id="year-input" onkeypress="return /[0-9]/i.test(event.key)" onkeyup="return /[0-9]/i.test(event.key)" minlength="1" maxlength="2">  
               <p class="error" id="mmyy-err">Can't be blank</p>
                 </div>
                 </div>
               <div>
                 <label for="">CVC</label><br>
-                <input type="text" placeholder="e.g. 123" id="cvc-input" onkeypress="return /[0-9]/i.test(event.key)" minlength="3" maxlength="3">
+                <input type="text" placeholder="e.g. 123" id="cvc-input" onkeypress="return /[0-9]/i.test(event.key)" onkeyup="return /[0-9]/i.test(event.key)" minlength="3" maxlength="3">
                 <p class="error" id="cvc-err">Can't be blank</p>
               </div>
           </div>
