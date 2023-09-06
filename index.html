@@ -53,7 +53,7 @@
           </div>
           <div>
             <label for="">Card Number</label><br>
-            <input type="text" id="cn-input" placeholder="e.g. 1234 5678 9123 0000" onkeydown="return /[0-9]/i.test(event.key)" maxlength="19">
+            <input type="text" id="cn-input" placeholder="e.g. 1234 5678 9123 0000" onkeydown="return ((event.keyCode>=0 && event.keyCode<=32) || (event.keyCode>=48 && event.keyCode<=57) || (event.keyCode==127))" maxlength="19">
             <p class="error" id="cn-err">Can't be blank</p>
           </div>
           <div class="input-data-cvc">
