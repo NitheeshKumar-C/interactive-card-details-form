@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- [solution URL](https://your-solution-url.com)
-- [live site URL](https://your-live-site-url.com)
+- [solution URL](https://github.com/NitheeshKumar-C/interactive-card-details-form)
+- [live site URL](https://nitheeshkumar-c.github.io/interactive-card-details-form/)
 
 ## My process
 
