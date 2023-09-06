@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.left-section {
+  position: relative;
+  background-image: url("../images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+.left-section .card-img {
+  top: 15%;
+  position: absolute;
+}
+.left-section .card-img .img-1 {
+  left: 30%;
+  position: relative;
+  width: 22em;
+  min-height: 13em;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background-image: url("../images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left-section .card-img .img-1 .img-1-card-logo img {
+  margin: 20px 0 0 25px;
+  width: 75px;
+}
+.left-section .card-img .img-1 .card-details {
+  color: white;
+  margin: 0 20px 20px 20px;
+}
+.left-section .card-img .img-1 .card-details #card-number {
+  letter-spacing: 3px;
+  font-size: 25px;
+}
+.left-section .card-img .img-1 .name-and-date {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.left-section .card-img .img-2 {
+  left: 50%;
+  position: relative;
+  width: 22em;
+  min-height: 13em;
+  border-radius: 10px;
+  background-image: url("../images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.left-section .card-img .img-2 #cvc {
+  margin-right: 15px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.right-section {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+.right-section label {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.right-section input {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: 2px solid hsl(270, 3%, 87%);
+}
+.right-section p {
+  margin-bottom: 5px;
+  visibility: hidden;
+}
+.right-section input[placeholder] {
+  color: hsl(279, 6%, 55%);
+  padding-left: 10px;
+  font-size: 13px;
+}
+.right-section .input-data-cvc {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.right-section .input-data-cvc label {
+  margin-bottom: 10px;
+}
+.right-section .input-data-cvc .mmyy {
+  margin-right: 40px;
+}
+.right-section .input-data-cvc .mmyy input {
+  max-width: 55px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+.right-section .error {
+  color: hsl(0, 100%, 66%);
+  font-size: 13px;
+  padding: 2px 4px;
+}
+.right-section #button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  margin-top: 20px;
+}
+.right-section #button:hover {
+  cursor: pointer;
+}
+
+#sucessful {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+#sucessful div {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+#sucessful h1 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 2px;
+}
+#sucessful p {
+  visibility: visible;
+  color: black;
+  font-size: 15px;
+  text-transform: none;
+  color: hsl(279, 6%, 55%);
+}
+
+.attribution {
+  margin-top: 10px;
+}
+.attribution a:hover {
+  font-weight: 900;
+}/*# sourceMappingURL=style.css.map */

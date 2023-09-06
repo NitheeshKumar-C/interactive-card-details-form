@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="main-section">
+      <section class="left-section">
+        <div class="card-img">
+          <div class="img-1">
+            <div class="img-1-card-logo">
+              <img src="./images/card-logo.svg" alt="">
+            </div>
+            <div class="card-details">
+              <span id="card-number"></span>
+              <div class="name-and-date">
+                <div><span id="name"></span></div>
+                <div><span id="month"></span>/<span id="year"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="img-2">
+            <span id="cvc"></span#>
+          </div>
+        </div>
+      </section>
+      <div>
+      <section class="right-section">
+        
+        <div id="input-area">
+          <div>
+            <label for="">Cardholder Name</label><br>
+            <input type="text" id="name-input" placeholder="e.g. Jane Appleseed" onkeypress="return /[a-z|A-Z]/i.test(event.key)" maxlength="20">
+            <p class="error" id="name-err">Can't be blank</p>
+          </div>
+          <div>
+            <label for="">Card Number</label><br>
+            <input type="text" id="cn-input" placeholder="e.g. 1234 5678 9123 0000" onkeypress="return /[0-9]/i.test(event.key)" maxlength="19">
+            <p class="error" id="cn-err">Can't be blank</p>
+          </div>
+          <div class="input-data-cvc">
+              <div>
+                <label for="">Exp. Date (MM/YY)</label><br>
+                <div class="mmyy">
+                  <input type="text" placeholder="MM" id="month-input" onkeypress="return /[0-9]/i.test(event.key)" minlength="1" maxlength="2" max="12">
+                <input type="text" placeholder="YY" id="year-input" onkeypress="return /[0-9]/i.test(event.key)" minlength="1" maxlength="2">  
+              <p class="error" id="mmyy-err">Can't be blank</p>
+                </div>
+                </div>
+              <div>
+                <label for="">CVC</label><br>
+                <input type="text" placeholder="e.g. 123" id="cvc-input" onkeypress="return /[0-9]/i.test(event.key)" minlength="3" maxlength="3">
+                <p class="error" id="cvc-err">Can't be blank</p>
+              </div>
+          </div>
+          <div>
+            <button id="button" onclick="validate()">Confirm</button>
+          </div>
+        </div>
+
+        <div id="sucessful">
+          <div> <img src="./images/icon-complete.svg" alt=""></div>
+          <div><h1>Thank You !</h1></div>
+          
+          <div><p>We've added your card details</p></div>
+          <div><button id="button" onClick="history.go(0);" style="margin-top: 0px; width: 100%;">Confirm</button></div>
+        </div>
+        
+      </section>
+      <section>
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
+          Coded by <a href="https://www.frontendmentor.io/profile/NitheeshKumar-C">NitheeshKumar</a>.
+        </div>
+      </section>
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- 0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+   Completed state start
+
+  Thank you!
+  We've added your card details
+  Continue -->
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
